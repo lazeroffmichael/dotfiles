@@ -1,0 +1,13 @@
+vim.opt.guicursor = ""            -- Thick blocks only :)
+vim.opt.clipboard = "unnamedplus" -- Sync to system keyboard
+vim.opt.swapfile = false          -- Disable the swap file
+vim.opt.expandtab = true          -- Use spaces instead of tabs
+vim.opt.tabstop = 4               -- Number of spaces a tab counts for
+vim.opt.shiftwidth = 4            -- How many spaces to tab each time
+vim.opt.number = true             -- Number column
+vim.opt.relativenumber = true     -- Relative numbering
+vim.opt.colorcolumn = "80"        -- Bar for crossing line 80
+vim.opt.ignorecase = true         -- For lowercase search, find everything
+vim.opt.smartcase = true          -- If uppercase for search, find just uppercase
+vim.opt.wrap = false              -- No wrap
+vim.opt.signcolumn = "yes"        -- Show sign column all the time so no shifting occurs
