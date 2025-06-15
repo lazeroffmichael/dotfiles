@@ -6,3 +6,8 @@ do
     stow --dotfiles -D $folder
     stow --dotfiles $folder
 done
+
+if [ ! -d "$HOME/.config/tmux/plugins/tpm" ];  then
+    echo "TMUX plugin directory does not exist"
+    git clone https://github.com/tmux-plugins/tpm $HOME/.config/tmux/plugins/tpm
+fi
