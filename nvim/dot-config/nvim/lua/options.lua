@@ -11,3 +11,4 @@ vim.opt.ignorecase = true         -- For lowercase search, find everything
 vim.opt.smartcase = true          -- If uppercase for search, find just uppercase
 vim.opt.wrap = false              -- No wrap
 vim.opt.signcolumn = "yes"        -- Show sign column all the time so no shifting occurs
+vim.opt.mouse = ""                -- Disable the mouse
