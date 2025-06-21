@@ -1,6 +1,7 @@
 # ENV VARIABLES
 export ZSH="$HOME/.oh-my-zsh"               
 export DOTFILES="$HOME/dotfiles"
+export NVIMCONF="$HOME/.config/nvim"
 
 # ALIASES
 alias ll="ls -lla"
