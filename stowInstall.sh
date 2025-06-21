@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/zsh
 
 for folder in $(echo */ | sed "s/,/ /g")
 do
