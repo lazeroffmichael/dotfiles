@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/zsh
 
 for folder in $(echo */ | sed "s/,/ /g")
 do
@@ -6,7 +6,15 @@ do
     stow --dotfiles -D $folder
 done
 
+# Remove the saved plugins directory if present
 if [ -d "./tmux/dot-config/tmux/plugins" ];  then
     echo "Removing TMUX plugins directory"
     rm -rf ./tmux/dot-config/tmux/plugins
+fi
+
+# Remove the oh-my-zsh installation
+
+if [ -d "$HOME/.oh-my-zsh/" ];  then
+    echo "Removing oh-my-zsh installation"
+    rm -rf $HOME/.oh-my-zsh/
 fi

@@ -11,16 +11,16 @@ Clone this repo in your $HOME directory:
 git clone https://github.com/lazeroffmichael/dotfiles.git $HOME/dotfiles
 ```
 
-Run the `stowInstall.sh` script:
+Run the `./install` script:
 ```
-./stowInstall
+./install
 ```
 
 ### Cleanup
 
-Run the `stowClean.sh` script:
+Run the `clean` script:
 ```
-./stowClean
+./clean
 ```
 
 ## Installing `stow`
@@ -51,6 +51,12 @@ Then run:
 sudo make
 sudo make install
 ```
+
+## `zsh`
+
+Make sure you have zsh installed with `zsh --version`. Make sure this is your default shell with `echo $0`.
+
+The `install` script will download `oh-my-zsh` automatically.
 
 ## `tmux`
 

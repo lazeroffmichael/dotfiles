@@ -13,4 +13,11 @@ if [ ! -d "$HOME/.config/tmux/plugins/tpm" ];  then
     git clone https://github.com/tmux-plugins/tpm $HOME/.config/tmux/plugins/tpm
 fi
 
-echo "Make sure you <prefix>I in TMUX to install the plugins!"
+# Install oh-my-zsh
+if [ ! -d "$HOME/.oh-my-zsh" ];  then
+    echo "oh-my-zsh directory does not exist"
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --keep-zshrc --unattended
+fi
+
+echo "\nMake sure you <prefix>I in TMUX to install the plugins!"
+zsh
