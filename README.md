@@ -25,13 +25,41 @@ Run the `clean` script:
 
 ## Installing `stow`
 
-If you are on a Debian based distro, just do:
+> Note, `stow` version 2.3.1 is broken, you need to use stow version 2.4.1 or greater.
+
+### Debian/Ubuntu
+
+Check which verison is available to install from the current archives:
 
 ```
+sudo apt show stow
+```
+
+If the version is not 2.4.1 or greater, we will install from one of the future release archives:
+
+```
+sudo vim /etc/apt/sources.list
+```
+
+Add the following to the bottom of the file:
+
+```
+deb http://archive.ubuntu.com/ubuntu/ questing main universe multiverse restricted
+deb http://archive.ubuntu.com/ubuntu/ questing-updates main universe multiverse restricted
+deb http://archive.ubuntu.com/ubuntu/ questing-security main universe multiverse restricted
+```
+
+Then upgrade:
+
+```
+sudo apt update && sudo apt upgrade -y
 sudo apt install stow
 ```
 
+### RHEL
+
 If you are on a RHEL based distro (but not running Fedora), it might be best to just compile from source to get the latest version:
+
 ```
 sudo dnf install perl -y
 wget https://ftp.gnu.org/gnu/stow/stow-latest.tar.gz
@@ -41,12 +69,14 @@ cd stow-<x.y.z>
 ```
 
 If after the `./configure` step it cannot find some of the test modules:
+
 ```
 cpan
 install <package>
 ```
 
 Then run:
+
 ```
 sudo make
 sudo make install

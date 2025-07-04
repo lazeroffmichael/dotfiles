@@ -12,7 +12,7 @@ ZSH_THEME="gnzh"
 
 # Enable basic plugins
 # GIT aliases: https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git#aliases
-plugins=(git)
+plugins=(git command-not-found)
 
 # SOURCE oh-my-zsh
 source $ZSH/oh-my-zsh.sh

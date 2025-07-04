@@ -6,6 +6,13 @@ do
     stow --dotfiles -D $folder
 done
 
+# Uninstall neovim
+if [ -d "/opt/nvim-linux-x86_64/" ];  then
+    echo "Removing neovim installation"
+    sudo rm -rf /opt/nvim-linux-x86_64
+    sudo rm /usr/local/bin/nvim
+fi
+
 # Remove the saved plugins directory if present
 if [ -d "./tmux/dot-config/tmux/plugins" ];  then
     echo "Removing TMUX plugins directory"
