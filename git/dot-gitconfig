@@ -5,3 +5,5 @@
 	name = Michael Lazeroff
 [includeIf "gitdir:~/git/goob/"]
     path = .gitconfig-goob
+[includeIf "gitdir:/docker/"]
+    path = .gitconfig-goob
