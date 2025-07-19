@@ -3,3 +3,5 @@
 [user]
 	email = 56806733+lazeroffmichael@users.noreply.github.com
 	name = Michael Lazeroff
+[includeIf "gitdir:~/git/goob/"]
+    path = .gitconfig-goob
