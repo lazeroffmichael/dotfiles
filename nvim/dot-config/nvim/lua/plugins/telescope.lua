@@ -4,7 +4,7 @@ return {
   dependencies = {
     'nvim-lua/plenary.nvim',
     {
-      'nvim-telescope/telescope-fzf-native.nvim',  -- Make it search blazingly fast
+      'nvim-telescope/telescope-fzf-native.nvim', -- Make it search blazingly fast
       build = 'make'
     }
   },
@@ -23,11 +23,11 @@ return {
     vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope: Find Buffers' })
     vim.keymap.set('n', '<leader>fr', builtin.oldfiles, { desc = 'Telescope: Find Buffers' })
     vim.keymap.set('n', '<leader>fn', function()
-      builtin.find_files {
-        cwd = vim.fn.stdpath('config')
-      }
-    end,
-    { desc = 'Telescope: Edit Neovim Config' })
+        builtin.find_files {
+          cwd = vim.fn.stdpath('config')
+        }
+      end,
+      { desc = 'Telescope: Edit Neovim Config' })
     vim.keymap.set('n', '<leader>sg', builtin.live_grep, { desc = 'Telescope: Grep' })
     vim.keymap.set('n', '<leader>sb', builtin.current_buffer_fuzzy_find, { desc = 'Telescope: Search Buffer' })
   end

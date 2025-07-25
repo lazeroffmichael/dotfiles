@@ -49,7 +49,8 @@ return {
             -- LSPs
             -- NOTE: SEE LSPCONFIG FOR CALLING THE SETUP
             -- lua-ls handled by lazydev
-            "pyright"
+            "pyright",
+            "prettierd"
           }
           require("mason").setup({
             ensure_installed = ensure_installed,
