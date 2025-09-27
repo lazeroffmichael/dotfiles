@@ -4,8 +4,8 @@ return {
     config = function()
       local capabilities = require('blink.cmp').get_lsp_capabilities()
       -- Enable the LSPs here
-      require("lspconfig").lua_ls.setup { capabilities = capabilities }
-      require("lspconfig").pyright.setup { capabilities = capabilities }
+      vim.lsp.enable("pyright", { capabilities = capabilities })
+      vim.lsp.enable("lua_ls", { capabilities = capabilities })
 
       vim.api.nvim_create_autocmd('LspAttach', {
         callback = function(args)
